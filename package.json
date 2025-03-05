@@ -1,15 +1,20 @@
 {
-  "name": "custom-patch-version",
+  "name": "custom-patcher",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.ts",
+  "main": "index.js",
+  "repository": "https://github.com/IvanZosimov/custom-patcher",
   "scripts": {
     "lint": "eslint ./src/**/*.ts",
     "lint:fix": "eslint ./src/**/*.ts --fix",
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node16 --minify --tree-shaking=true --outfile=dist/index.js",
-    "dev": "tsx ./src/index.ts"
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node16 --minify --tree-shaking=true  --banner:js=\"#!/usr/bin/env node\" --outfile=dist/index.js",
+    "dev": "tsx ./src/index.ts",
+    "prepublish": "npm run build",
+    "publish": "npm run prepublish && npm publish"
   },
-  "type": "module",
+  "bin": {
+    "custom-patcher": "./dist/index.js"
+  },
+  "keywords": ["cli", "tool", "nodejs", "custom", "version"],
   "author": "mumutoje",
   "license": "MIT",
   "devDependencies": {

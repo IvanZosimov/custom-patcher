@@ -213,6 +213,7 @@ export class MainModule {
       showMessage(error.message, 'error');
     } finally {
       this.reportState();
+      process.exit(0);
     }
   }
 }
