@@ -7,8 +7,7 @@
     "lint": "eslint ./src/**/*.ts",
     "lint:fix": "eslint ./src/**/*.ts --fix",
     "build": "esbuild src/index.ts --bundle --platform=node --target=node16 --minify --tree-shaking=true  --banner:js=\"#!/usr/bin/env node\" --outfile=dist/index.js",
-    "dev": "tsx ./src/index.ts",
-    "prepublish": "npm run build"
+    "dev": "tsx ./src/index.ts"
   },
   "bin": {
     "custom-patcher": "./dist/index.js"
