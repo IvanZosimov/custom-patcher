@@ -10,14 +10,14 @@ export class CliModule {
     .option('verbose', {
       alias: 'v',
       type: 'boolean',
-      describe: 'Turn on verbose logging mode, each step is logged',
+      describe: 'Turn on verbose logging mode',
       default: false,
     })
     .option('quick', {
       alias: 'q',
       type: 'boolean',
       describe:
-        'Turn on semiautomatic mode. Only version update is asked to be confirmed. After that everything is done without user interaction',
+        'Turn on low interaction mode',
       default: false,
     })
     .option('help', { alias: 'h', type: 'boolean', default: false })

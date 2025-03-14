@@ -25,7 +25,7 @@ export class VersionFileModule {
     try {
       return fs.existsSync(path);
     } catch (err) {
-      throw new Error(`Failed to check if version file exists: ${err}`);
+      throw new Error(`Failed to find version file on the path: ${path}. ${err}`);
     }
   };
 
