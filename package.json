@@ -1,6 +1,6 @@
 {
   "name": "custom-patcher",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "repository": "https://github.com/IvanZosimov/custom-patcher",
   "homepage": "https://github.com/IvanZosimov/custom-patcher/blob/main/README.md",
