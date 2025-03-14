@@ -94,6 +94,14 @@ export class MainModule {
 
       const isVersionFileExists = isVersionFileExist(versionFilePath);
 
+      if (!isVersionFileExists) {
+        showMessage(
+          `Version file is not found at: ${versionFilePath}`,
+          'error'
+        )
+        return
+      }
+
       if (isVersionFileExists) {
         showMessage(`Version file is found at: ${versionFilePath}`, 'verbose');
         const versionFileData = getVersionFileData(versionFilePath);
