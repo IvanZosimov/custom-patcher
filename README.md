@@ -59,5 +59,5 @@ custom-patcher -h
 
 ## License
 
-MIT
+MIT License
 
